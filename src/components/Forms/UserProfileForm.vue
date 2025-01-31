@@ -86,9 +86,7 @@ const formData = ref<FormData>({
 const errors = ref<FormErrors>({})
 
 const updateField = <K extends keyof FormData>(field: K, value: FormData[K]) => {
-  console.log('updateField', field, value)
   formData.value[field] = value
-  console.log('formData', formData.value)
 }
 
 const fetchFunction = () => ({
