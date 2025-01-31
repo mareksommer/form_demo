@@ -65,7 +65,7 @@ const submitFunction = () => ({
   method: 'POST',
 })
 
-const updateField = (field: keyof typeof formData.value, value: string) => {
+const updateField = <K extends keyof FormData>(field: K, value: FormData[K]) => {
   formData.value[field] = value
 }
 
