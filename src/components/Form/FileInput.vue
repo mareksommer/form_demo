@@ -41,7 +41,7 @@ const updateValue = (event: Event) => {
   const target = event.target as HTMLInputElement
   const files = target.files
   const file = files?.[0]
-  console.log(file)
+
   // get base64
   const reader = new FileReader()
   reader.readAsDataURL(file)
