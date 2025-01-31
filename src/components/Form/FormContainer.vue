@@ -12,12 +12,8 @@ import { apiService, type FetchResponse } from '../../utils/fetch'
 import type { ZodSchema, ZodIssue } from 'zod'
 import ErrorList from '../ErrorList.vue'
 
-type FormData = {
-  [key: string]: string | boolean | File | null
-}
-
-type Props = {
-  formData: FormData
+type Props<T = unknown> = {
+  formData: T
   fetchFunction?: () => {
     endpoint: string
     method?: string
